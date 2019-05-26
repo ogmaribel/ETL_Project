@@ -1,0 +1,48 @@
+body {/* body general format */
+    font-size: 16px;
+    color: White;
+    background-color: white;
+    font-family: 'Oxygen', sans-serif; /* www.google.com/fonts */
+  }
+
+/** HEADER **/
+#header-nav {/* I want that the header fill the whole screen */
+    background-color: black; 
+    border-radius: 0;
+    border: 0;
+  }
+  
+  .navbar-brand {/* Align the text at the same position of the image */
+    padding-top: 10px;
+  }
+  .navbar-brand h1 { /* Modify the text*/
+    font-family: 'Lora', serif;
+    color: black;
+    font-size: 1em; /* em is equal to the current font-size */
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #828181;
+  }
+  
+  .navbar-brand a:hover, .navbar-brand a:focus { /* To remove any effect when the mouse is over the brand */
+    text-decoration: none;
+  }
+  
+  #nav-list a {
+    color: black;
+    text-align: center;
+  }
+  #nav-list a:hover {/* Shadow when passing the cursor over the menu */
+    background: #DADBDB;
+  }
+  #nav-list a span {
+    font-size: 1.8em; /* Increase the size in 80% */
+  }
+  
+  #nav-list p a {
+    color: black;
+    text-align: center;
+    margin:2px;
+  }
+  /** END HEADER **/
+

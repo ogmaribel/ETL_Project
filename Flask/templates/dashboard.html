@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Costa Rica Weather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- The container is inside the nav so it stretches to the screen -->
+            <nav id="header-nav" class="navbar navbar-default">
+                <div class="container-fuid"> <!-- Regular container to change the width based on the width of the browser, the fluid streches to the secreen -->
+                    <div class="navbar-header"><!-- To get a better mobile display -->
+                        <!-- The image is set to the left so the following text do not stac, also it will only visible when the screen size is medium or large -->
+                        <a href="start.html" class="pull-left"> 
+                            <div id="logo-img"></div>
+                        </a>
+                        <div class="navbar-brand" class="pull-left"> <!-- Is recommended that the name of the wp be inside the navbar-brand-->
+                            <a href="start.html"><h1>Stock Market Summary</h1></a>
+                        </div>
+    
+                        <!-- navbar-toggle controls the position and it is displayed when it is less than medium size-->
+                        <!-- collapse is a class from js and it pull the menu down and up-->
+                        <!-- Collapsable nav will include the menues that will be dissapearing-->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span> <!-- sr. only means that it will not be rendered-->
+                            <span class="icon-bar"></span> <!-- The number of lines that the button will display-->
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div> <!-- closes navbar-header -->
+    
+                    <!-- The option buttons are placed bellow navbar header so the effects are not included -->  
+                    <!-- We are selectiong the Collapsable nav as the id to know were the target will be-->
+                    <div id="collapsable-nav" class="collapse navbar-collapse">
+                        <!-- nav navbar will be the classes that will create the down menu and navbar right will float everything to the right-->
+                        <ul id="nav-list" class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="start.html">
+                                    <!-- glyphicon brings an icon font the hidden-xs class means that the break space will be away when the screen size is extra small-->
+                                    <span class="glyphicon glyphicon-home"></span><br class="hidden-xs"> Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="start.html">
+                                    <!-- glyphicon brings an icon font the hidden-xs class means that the break space will be away when the screen size is extra small-->
+                                    <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs"> Dashboard
+                                </a>
+                            </li>
+    
+                        </ul><!-- #nav-list -->
+                    </div><!-- .collapse .navbar-collapse -->
+                </div><!-- .container -->
+            </nav><!-- #header-nav -->
+        </header>
+
+
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Dashboard</h1>
+      <hr class="my-4">
+      <p>You can click on the .... to see the stock market recomendation system for each company.</p>
+    </div>
+    <div >
+            <a href="humidity.html"><div>APPLE</div></a>
+            <a href="humidity.html"><div>GOOGLE</div></a>
+            <a href="humidity.html"><div>AMAZON</div></a>
+            <a href="humidity.html"><div>ETC</div></a>
+    </div>
+  </div>
+  </div>
+
+  <footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+        </div>
+        <div class="text-center">&copy; Copyright Jose&Maribel 2019</div>
+      </div>
+    </footer>
+</body>
+
+</html>

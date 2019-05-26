@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Financial Recommendation System</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/static/css/style.css">
+
+                <style>
+                        body{
+                            background-color: white;
+                            color:black;
+                        }
+                        #header-nav {/* I want that the header fill the whole screen */
+                            background-color: black; 
+                            border-radius: 0;
+                            border: 0;
+                        }
+
+                        .navbar-brand {/* Align the text at the same position of the image */
+                            padding-top: 10px;
+                        }
+                        .navbar-brand h1 { /* Modify the text*/
+                            font-family: 'Lora', serif;
+                            color: white;
+                            font-size: 1em; /* em is equal to the current font-size */
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            text-shadow: 1px 1px 1px #828181;
+                        }
+
+                        .navbar-brand a:hover, .navbar-brand a:focus { /* To remove any effect when the mouse is over the brand */
+                            text-decoration: none;
+                        }
+                        
+                        #nav-list a {
+                            color: white;
+                            text-align: center;
+                        }
+                        #nav-list a:hover {/* Shadow when passing the cursor over the menu */
+                            background: #DADBDB;
+                        }
+                        #nav-list a span {
+                            font-size: 1.8em; /* Increase the size in 80% */
+                        }
+                        .jumbotron {
+                            min-height: 300px;
+                            color: black;
+                            box-shadow: 0 0 15px rgb(194, 194, 194);
+                            margin-bottom: 10px;
+                        }
+                        h3
+                        {
+                            text-align: center;
+                            background-color: black(243, 243, 243);
+                            color: black;
+                            margin-top:0;
+                            margin-bottom:30px;
+                            padding:0;
+                        }
+                        h2
+                        {
+                            color: black;
+                        }
+                        .comparison-clases{
+                            background-color: black;
+                            color: white;
+                            width: 100%;
+                            text-align: center;
+                            background-position: center;
+                            margin:0;
+                            padding-top:0;
+                            padding-bottom:0;
+                            }
+                    
+                    </style>
+
+              </head>
+<body>
+    <header>
+                    <!-- The container is inside the nav so it stretches to the screen -->
+                        <nav id="header-nav" class="navbar navbar-default">
+                            <div class="container-fuid"> <!-- Regular container to change the width based on the width of the browser, the fluid streches to the secreen -->
+                                <div class="navbar-header"><!-- To get a better mobile display -->
+                                    <!-- The image is set to the left so the following text do not stac, also it will only visible when the screen size is medium or large -->
+
+                
+                                    <!-- navbar-toggle controls the position and it is displayed when it is less than medium size-->
+                                    <!-- collapse is a class from js and it pull the menu down and up-->
+                                    <!-- Collapsable nav will include the menues that will be dissapearing-->
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span> <!-- sr. only means that it will not be rendered-->
+                                        <span class="icon-bar"></span> <!-- The number of lines that the button will display-->
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div> <!-- closes navbar-header -->
+                
+                                <!-- The option buttons are placed bellow navbar header so the effects are not included -->  
+                                <!-- We are selectiong the Collapsable nav as the id to know were the target will be-->
+                                <div id="collapsable-nav" class="collapse navbar-collapse">
+                                    <!-- nav navbar will be the classes that will create the down menu and navbar right will float everything to the right-->
+                                    <ul id="nav-list" class="nav navbar-nav navbar-center">
+ 
+                                                <a href="/">
+                                                    <!-- glyphicon brings an icon font the hidden-xs class means that the break space will be away when the screen size is extra small-->
+                                                    <span class="glyphicon glyphicon-stats"></span><br class="hidden-xs"> Next
+                                                </a>
+                                            </li>
+                
+                                    </ul><!-- #nav-list -->
+                                </div><!-- .collapse .navbar-collapse -->
+                            </div><!-- .container -->
+                        </nav><!-- #header-nav -->
+    </header>
+
+    <div id="main-comparison" class="container">
+        <!-- #Jumbotron is used to call extra attention -->
+         <h2> {{transformed.name}}</h2>
+                <hr class="my-4">  
+        <div class="jumbotron jumbotron-fluid">
+                
+            <div id="home-tiles" class="row"></div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <img src="{{transformed.shares_plot}}"  alt="Sloth"  height="200" width="300">
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="comparison-clases"></div>
+                    <img src="{{transformed.profit_plot}}"  alt="Sloth"  height="200" width="300">
+                </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="comparison-clases"></div>
+                    <img src="{{transformed.wealth_plot}}"  alt="Sloth"  height="200" width="300">
+                </div>
+                 
+                </div>
+                
+            <div class="col-md-3 col-sm-6 col-xs-3">
+                    <div class="comparison-clases">Long</div>
+                    <h3>{{transformed.Shares}}</h3>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-3">
+                    <div class="comparison-clases">Direction</div>
+                    <h3>{{ transformed.Direction }}</h3>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-3">
+                        <div class="comparison-clases">Cumulative Wealth:</div>
+                    <h3>{{ transformed.wealth }}</h3>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-3">
+                    <div class="comparison-clases">Last Close</div>
+                    <h3>{{ transformed.close }}</h3>
+            </div>
+        </div><!-- End of jumbotron -->
+        
+      
+        
+    </div><!-- End of #main-content -->
+
+    <footer class="panel-footer">
+            <div class="container">
+              <div class="row">
+              </div>
+              <div class="text-center">&copy; Copyright JM 2019</div>
+            </div>
+          </footer>
+        
+       
+
+</body>
+</html>
