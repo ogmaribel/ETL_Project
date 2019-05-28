@@ -1,7 +1,6 @@
 # ETL_Project
 
-## Step 1 - Climate Analysis and Exploration
-A jupyter notebook is created to gather climatological data from Honolulu, Hawaii from a SQLite file to perform the following analysis:
+For this project a stock market recommendation system was created. It consists of two tools a Dashboard to check the last updates of an specific company and a chatbot using slack as the interface to ask some questions in order to figure out if the company is a good investment:
 
 Precipitation Analysis
 ![Slack-Chatbot](Images/chatbot.png)
