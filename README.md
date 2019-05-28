@@ -20,7 +20,7 @@ The new data was stored in a new table in MongoDB and was used to feed the dashb
 The dashboard was developed using Flask, MongoDB and HTML. (Located in the Flask folder)
 
 # Chatbot
-The chatterbot librarie was used to train the bot, then it was connected to Slack using the Slackbot Tool and Slack Client.
+The chatterbot librarie was used to train the bot, then it was connected to Slack using the Slackbot Tool and Slack Client. (botapp.py)
 
 
 
