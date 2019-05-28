@@ -9,7 +9,8 @@ For this project a stock market recommendation system was created using the Extr
 
 ## Description
 The project uses the ETL method. 
-### For thcontains the following documents:
+
+### For thcontains the following documents:
 * A jupyter notebook were the 
 
 
