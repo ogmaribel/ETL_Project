@@ -7,7 +7,7 @@ Precipitation Analysis
 ![Slack-Chatbot](Images/chatbot.png)
 
 Station Analysis
-![Station](Images/Temperature_histogram.png)
+![Dashboard](Images/dashboard.png)
 
 Temperature Analysis
 ![Temperature1](Images/Average_temperature.png)
