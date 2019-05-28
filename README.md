@@ -4,7 +4,7 @@
 A jupyter notebook is created to gather climatological data from Honolulu, Hawaii from a SQLite file to perform the following analysis:
 
 Precipitation Analysis
-![Slack-Chatbot](Images/Screen Shot 2019-05-24 at 11.08.55 PM.png)
+![Slack-Chatbot](Images/chatbot.png)
 
 Station Analysis
 ![Station](Images/Temperature_histogram.png)
